@@ -16,10 +16,12 @@ namespace NonLinearEquation
     {
         public static double NewtonRaphsonMethod()
         {
+            Console.Clear();
+            Console.WriteLine("Niutono - Rapsono metodas.");
             double pradinisArtinys;
             double epselon;
 
-            Console.Write("Įveskite pradinį artinį");
+            Console.Write("Įveskite pradinį artinį: ");
             if (!Double.TryParse(Console.ReadLine(), out pradinisArtinys))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -29,7 +31,7 @@ namespace NonLinearEquation
                 return 0;
             }
 
-            Console.Write("Įveskite norimą epseloną");
+            Console.Write("Įveskite norimą epseloną: ");
             if (!Double.TryParse(Console.ReadLine(), out epselon))
             {
                 Console.ForegroundColor = ConsoleColor.Red;

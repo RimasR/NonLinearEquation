@@ -21,7 +21,8 @@ namespace NonLinearEquation
     {
         public static double BisectionMethodAlgorithm()
         {
-
+            Console.Clear();
+            Console.WriteLine("Pusiaukirtos metodas.");
             double intervaloApacia;
             double intervaloVirsus;
             double epselon;

@@ -10,7 +10,7 @@ namespace NonLinearEquation
             while (isTrue)
             {
                 Console.WriteLine("Pasirinkite, kurį algoritmą norėsite naudoti: " +
-                              "\r\n1.Pusiaukirtos metodas" +
+                              "\r\n1. Pusiaukirtos metodas" +
                               "\r\n2. Niutono - Rapsono metodas" +
                               "\r\n3. Išeiti iš programos");
                 Console.Write("Jūsų pasirikimas: ");
@@ -34,6 +34,7 @@ namespace NonLinearEquation
                         Console.WriteLine("Blogas pasirinkimas!");
                         Console.ResetColor();
                         Console.ReadLine();
+                        Console.Clear();
                         break;
                 }
             }

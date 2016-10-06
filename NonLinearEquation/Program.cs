@@ -4,6 +4,12 @@ namespace NonLinearEquation
 {
     public class Program
     {
+
+        static double f(double x)
+        {
+            return Math.Log(x) + 2;
+        }
+
         public static void Main()
         {
             var isTrue = true;
@@ -18,7 +24,8 @@ namespace NonLinearEquation
                 switch (pasirinkimas)
                 {
                     case "1":
-                        BisectionMethod.BisectionMethodAlgorithm();
+                        double computed = NewBisectionBecauseOldWasPieceOfShit.Solve();
+                        //BisectionMethod.BisectionMethodAlgorithm();
                         break;
 
                     case "2":

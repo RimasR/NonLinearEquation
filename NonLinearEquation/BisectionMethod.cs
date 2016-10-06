@@ -81,7 +81,7 @@ namespace NonLinearEquation
 
             // Sukame ciklą, kol apytikslis sprendinys yra didesnis už norimą epseloną
 
-            while (apytikslis > epselon*2)
+            while (iter < itermax && (intervaloVirsus - intervaloApacia > epselon))
             {
 
                 // Randame vidurio tašką sudedant intervalo apačią ir viršų, ir padalinant iš 2
@@ -94,10 +94,11 @@ namespace NonLinearEquation
                 var sprendinioAtsakymas = RastiLygtiesSprendini(vidurioTaskas);
 
                 // Jei lygties sprendinys lygus nuliui - turime atsakymą, vidurioTaskas bus mūsų atsakymas
-                if (sprendinioAtsakymas == 0)
-                {
-                    break;
-                }
+                //if (sprendinioAtsakymas < epselon)
+                //{
+                //    Console.WriteLine($"Sprendinio atsakymas : {sprendinioAtsakymas}");
+                //    break;
+                //}
 
                 // Jei visgi lygties sprendinys nėra lygus nuliui, žiūrime koks bus mūsų naujas intervalas.
 
@@ -120,7 +121,7 @@ namespace NonLinearEquation
                     break;
                 }
 
-                Console.WriteLine($"Iteracija: {iter}, galimas atsakymas: {vidurioTaskas}");
+                Console.WriteLine($"Iteracija: {iter}, galimas atsakymas: {vidurioTaskas},intervalo apacia {intervaloApacia}, intervalo virsus: {intervaloVirsus}, lygties sprendinys: {sprendinioAtsakymas}");
 
                 // Didiname iteraciją per vieną.
                 iter += 1;
@@ -134,7 +135,7 @@ namespace NonLinearEquation
         // Lygties sprendinio metodas, galima apsirašyti ir kitokią lygtį.
         private static double RastiLygtiesSprendini(double x)
         {
-            return Math.Log(x) - 2;
+            return Math.Log(x) + 2;
         }
     }
 }

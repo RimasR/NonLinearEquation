@@ -42,7 +42,7 @@ namespace NonLinearEquation
             }
 
             double galimasAtsakymas = 0;
-            var maksimalusIteracijuSkaicius = 1000;
+            var maksimalusIteracijuSkaicius = 50;
 
             // Pasileidžiame ciklą iki maksimalaus iteracijų skaičiaus, kad nebūtų begalinis.
             for (var iteracija = 0; iteracija < maksimalusIteracijuSkaicius; iteracija++)
@@ -70,13 +70,13 @@ namespace NonLinearEquation
         // Lygties sprendinio metodas, galima apsirašyti ir kitokią lygtį.
         private static double LygtiesSprendimas(double x)
         {
-            return Math.Log(x) - 2;
+            return Math.Log(x) + 2;
         }
 
         // Lygties sprendinio išvetinės metodas, galima apsirašyti ir kitokią išvestinę.
         private static double LygtiesIsvestinesSprendimas(double x)
         {
-            return 1 / x + 2;
+            return 1 / x;
         }
     }
 }
